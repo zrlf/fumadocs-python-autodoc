@@ -1,0 +1,77 @@
+@source '../dist/**/*.js';
+
+:root {
+  /* Fumadocs Python API package colors */
+  --fdpy-func: hsl(154, 31%, 34%);
+  --fdpy-class: hsl(359, 68%, 60%);
+  --fdpy-meth: hsl(210, 70%, 30%);
+}
+
+.dark {
+  --fdpy-class: hsl(359, 78%, 77%);
+  --fdpy-func: hsl(154, 31%, 44%);
+  --fdpy-meth: hsl(210, 70%, 70%);
+}
+
+@theme inline {
+  --color-fdpy-func: var(--fdpy-func);
+  --color-fdpy-class: var(--fdpy-class);
+  --color-fdpy-meth: var(--fdpy-meth);
+}
+
+@utility fdpy-divider {
+  @apply flex gap-4 items-center relative pb-2 !text-xl !text-fd-muted-foreground;
+  @apply after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-fd-border;
+}
+
+@utility fdpy-method-standalone {
+  @apply bg-fd-secondary rounded-xl border border-fd-border;
+}
+
+/* Code Styling */
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+}
+
+h5.fdpy-header {
+  @apply text-base pr-2 font-bold text-fd-muted-foreground mt-6;
+}
+
+h6.fdpy-header {
+  @apply text-base font-semibold;
+}
+
+/* Table of Contents Labels */
+.toc-func::before,
+.toc-class::before,
+.toc-meth::before {
+  @apply text-xs rounded-sm p-1 mr-1;
+}
+
+.toc-func::before {
+  content: "func";
+  @apply bg-fdpy-func/10 text-fdpy-func/70;
+}
+
+.toc-class::before {
+  content: "class";
+  @apply bg-fdpy-class/10 text-fdpy-class/70;
+}
+
+.toc-meth::before {
+  content: "meth";
+  @apply bg-fdpy-meth/10 text-fdpy-meth/70;
+}
+
+/* Class Label */
+.class::before {
+  content: "class";
+  @apply bg-fdpy-class/10 text-fdpy-class/70 rounded-sm p-1 text-[0.7em];
+}
+
+.function-header {
+  figure.shiki:last-child {
+    @apply rounded-xl border-0 shadow-inner;
+  }
+}
