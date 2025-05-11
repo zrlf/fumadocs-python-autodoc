@@ -1,4 +1,4 @@
-# Python autodoc for [Fumadocs](fumadocs.dev)
+# Python autodoc for [Fumadocs](https://fumadocs.dev)
 
 See it in action [here](https://bamboost.ch/apidocs).
 
@@ -118,5 +118,5 @@ See the example app in this repo for a working example.
 
 - Docstrings are rendered using a Markdown pipeline. Assumes your docstrings are in Markdown format.
 - In terms of functionality this does not compete with mature autodocumentation tools like Sphinx or MkDocs.
-- This is an early adaption of my own workflow for [bamboost](bamboost.ch). Contributions are welcome.
+- This is an early adaption of my own workflow for [bamboost](https://bamboost.ch). Contributions are welcome.
 - I am inexperienced with web development and typescript. Please be kind.
