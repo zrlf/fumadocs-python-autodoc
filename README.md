@@ -18,7 +18,8 @@ fumadocs-autodoc <pkg_name> --dir ./lib
 
 2. Add a config file `fumapy.config.ts` in the root of your project. Here you specify each package to document:
 
-```ts title=fumapy.config.ts
+```ts
+// fumapy.config.ts
 import { Config } from "fumadocs-python-autodoc/source";
 
 const config: Config = {
@@ -47,7 +48,8 @@ export default config;
 
 3. Add a source in `lib`:
 
-```ts title=lib/autodocSources.ts
+```ts 
+// lib/autodocSources.ts
 import config from "@/fumapy.config";
 import { getSources } from "fumadocs-python-autodoc/source";
 import {
@@ -63,7 +65,8 @@ setShikiConfigContext(config.shiki);
 
 4. Add a dynamic route in `app/(apidocs)/[...slug]` which handles the autodoc for all specified packages:
 
-```ts title=layout.tsx
+```ts 
+// app/(apidocs)/[...slug]/layout.tsx
 import { ReactNode } from "react";
 import { AutoDocLayout } from "fumadocs-python-autodoc/components";
 import { baseOptions } from "@/app/layout.config";
@@ -93,7 +96,8 @@ export default async function Layout({
 }
 ```
 
-```ts title=page.tsx
+```ts
+// app/(apidocs)/[...slug]/page.tsx
 import { autodocSources } from "@/lib/autodocSources";
 import { makePage } from "fumadocs-python-autodoc/components";
 
