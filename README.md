@@ -9,6 +9,17 @@ See it in action [here](https://bamboost.ch/apidocs).
 - Includes source code in the documentation
 - Generates a page for each module
   Easily add source code documentation to your Fumadocs documentation site (assumes you have Fumadocs already set up):
+- Custom source for fumadocs (includes structured data for search implementation)
+
+## Installation
+
+```bash
+pnpm add fumadocs-python-autodoc shiki rehype-react unified
+```
+
+```bash
+pip install fumadocs-autodoc
+```
 
 ## Usage
 
@@ -50,7 +61,7 @@ export default config;
 
 3. Add a source in `lib`:
 
-```ts 
+```ts
 // lib/autodocSources.ts
 import config from "@/fumapy.config";
 import { getSources } from "fumadocs-python-autodoc/source";
@@ -67,7 +78,7 @@ setShikiConfigContext(config.shiki);
 
 4. Add a dynamic route in `app/(apidocs)/[...slug]` which handles the autodoc for all specified packages:
 
-```ts 
+```ts
 // app/(apidocs)/[...slug]/layout.tsx
 import { ReactNode } from "react";
 import { AutoDocLayout } from "fumadocs-python-autodoc/components";
@@ -108,6 +119,13 @@ const { Page, generateStaticParams, generateMetadata } =
 
 export default Page;
 export { generateStaticParams, generateMetadata };
+```
+
+5. Add stylesheet:
+
+```css
+// global.css
+@import "fumadocs-python-autodoc/preset.css";
 ```
 
 5. Add links to your layout and homepage. That's it.

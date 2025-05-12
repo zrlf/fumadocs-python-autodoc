@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "Python autodoc for FumaDocs",
   "license": "MIT",
-  "author": "Flavio Lorez",
+  "author": {
+    "name": "zrlf",
+    "email": "florez@ethz.ch"
+  },
   "keywords": [],
   "type": "module",
   "sideEffects": false,

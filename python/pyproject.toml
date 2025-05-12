@@ -4,7 +4,7 @@ version = "0.0.1"
 description = "Extract API documentation from source code and docstrings. For the python API extension for FumaDocs."
 readme = "README.md"
 authors = [
-    { name = "florez", email = "florez@ethz.ch" }
+    { name = "zrlf", email = "florez@ethz.ch" }
 ]
 requires-python = ">=3.10"
 dependencies = [
