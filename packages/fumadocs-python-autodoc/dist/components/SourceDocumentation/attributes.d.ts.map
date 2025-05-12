@@ -1,0 +1,1 @@
+{"version":3,"file":"attributes.d.ts","sourceRoot":"","sources":["../../../src/components/SourceDocumentation/attributes.tsx"],"names":[],"mappings":"AAGA,OAAO,EAAE,kBAAkB,EAAE,MAAM,SAAS,CAAC;AAG7C,eAAO,MAAM,UAAU,GAAI,4BAIxB;IACD,IAAI,EAAE,kBAAkB,EAAE,CAAC;IAC3B,MAAM,CAAC,EAAE,MAAM,CAAC;IAChB,OAAO,CAAC,EAAE,OAAO,CAAC;CACnB,4CAsCA,CAAC"}
