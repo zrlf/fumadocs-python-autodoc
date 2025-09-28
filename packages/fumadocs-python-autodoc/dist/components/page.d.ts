@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CustomSource } from "../source";
 declare function makePage(sources: {
     [key: string]: CustomSource;
@@ -14,10 +15,7 @@ declare function makePage(sources: {
         params: Promise<{
             slug?: string[];
         }>;
-    }) => Promise<{
-        title: string | undefined;
-        description: string | undefined;
-    }>;
+    }) => Promise<Metadata>;
 };
 export { makePage };
 //# sourceMappingURL=page.d.ts.map

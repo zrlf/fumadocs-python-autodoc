@@ -17,7 +17,7 @@ export const Module = ({ data, source }) => {
                     .split(".")
                     .slice(1)
                     .map((slug) => slug.replace("index", "index_"));
-                return (_jsx(Card, { title: module.name, description: module.description?.split("\n\n")[0], href: `${baseUrl}/${sanitizedSlug.join("/")}` }, module.name));
+                return (_jsx(Card, { title: module.name, description: module.description?.split("\n\n")[0], href: `/${baseUrl}/${sanitizedSlug.join("/")}` }, module.name));
             }) }));
     }
     return (_jsxs("div", { children: [data.description && _jsx(Markdown, { input: data.description }), data.docstring && _jsx(DocstringSections, { sections: data.docstring }), _jsx("div", { className: "mt-4", children: cards }), data.attributes.length > 0 && (_jsxs(_Fragment, { children: [_jsxs("h2", { className: "fdpy-divider", id: "attributes", children: [_jsx(TableOfContents, {}), "Attributes"] }), _jsx(Attributes, { data: data.attributes, noTitle: true })] })), Object.keys(data.functions).length > 0 && (_jsxs(_Fragment, { children: [_jsxs("h2", { className: "fdpy-divider", id: "functions", children: [_jsx(TableOfContents, {}), "Functions"] }), _jsx(Functions, { data: Object.values(data.functions) })] })), Object.values(data.classes).length > 0 && (_jsxs(_Fragment, { children: [_jsxs("h2", { className: "fdpy-divider", id: "classes", children: [_jsx(TableOfContents, {}), "Classes"] }), _jsx(Classes, { data: Object.values(data.classes) })] }))] }));
