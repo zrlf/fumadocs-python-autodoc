@@ -76,13 +76,10 @@ export function createCustomSource(
     if (path.length > 0 && currentData.name) {
       function addPage(currentData: ModuleInterface, path: string[]) {
         function handlePageNamedIndex(slugIn: string[]) {
-          if (slugIn[slugIn.length - 1] === "index") {
-            return [...slugIn.slice(0, -1), "index_"];
-          } else {
-            return Object.keys(currentData.modules).length > 0
-              ? [...slugIn, "index"]
-              : slugIn;
-          }
+          const slug = slugIn.map((s) => (s === "index" ? "index_" : s));
+          return Object.keys(currentData.modules).length > 0
+            ? [...slug, "index"]
+            : slug;
         }
         const slug = handlePageNamedIndex(path);
         pages.push({

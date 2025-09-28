@@ -25,7 +25,7 @@ export const Module = ({ data, source }: { data: ModuleInterface, source: Custom
               key={module.name}
               title={module.name}
               description={module.description?.split("\n\n")[0]}
-              href={`${baseUrl}/${sanitizedSlug.join("/")}`}
+              href={`/${baseUrl}/${sanitizedSlug.join("/")}`}
             />
           );
         })}

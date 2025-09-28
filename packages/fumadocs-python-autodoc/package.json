@@ -38,7 +38,7 @@
   "peerDependencies": {
     "fumadocs-core": "15.x.x",
     "fumadocs-ui": "15.x.x",
-    "lucide-react": "^0.507.0",
+    "lucide-react": ">=0.507.0",
     "next": ">=14",
     "react": ">=16",
     "rehype-react": "^8.0.0",

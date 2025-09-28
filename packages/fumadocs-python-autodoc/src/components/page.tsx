@@ -62,7 +62,7 @@ function makePage(sources: { [key: string]: CustomSource }) {
 
   async function generateMetadata(props: {
     params: Promise<{ slug?: string[] }>;
-  }) {
+  }): Promise<Metadata> {
     const params = await props.params;
     const source = Object.values(sources).find((source) => {
       return params.slug ? source.baseUrl === params.slug[0] : false;
