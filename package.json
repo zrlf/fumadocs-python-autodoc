@@ -12,5 +12,6 @@
   },
   "author": "Flavio Lorez",
   "license": "MIT",
-  "packageManager": "pnpm@10.9.0"
+  "packageManager": "pnpm@10.9.0",
+  "version": "0.0.1"
 }
