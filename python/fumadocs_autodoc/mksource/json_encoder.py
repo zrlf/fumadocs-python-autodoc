@@ -1,7 +1,7 @@
 import typing as t
 
 import griffe
-from _griffe.encoders import _json_encoder_map
+from griffe._internal.encoders import _json_encoder_map
 
 
 def stringify(expr):

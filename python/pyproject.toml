@@ -1,6 +1,6 @@
 [project]
 name = "fumadocs-autodoc"
-version = "0.0.1"
+version = "0.0.2"
 description = "Extract API documentation from source code and docstrings. For the python API extension for FumaDocs."
 readme = "README.md"
 authors = [
@@ -8,7 +8,7 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "griffe",
+    "griffe>=1.11",
 ]
 
 [project.scripts]
