@@ -12,7 +12,7 @@ export function AutoDocLayout({ sources, shikiConfig, slug, children, ...baseOpt
     const treeChildren = source.pageTree.children;
     const modifiedTreeChildren = [];
     for (const child of treeChildren) {
-        const isRoot = child.name?.toString().startsWith("bamboost");
+        const isRoot = child.name?.toString().startsWith(source.pkgName);
         if (isRoot) {
             child.name = child.name?.toString().split("@")[0];
             // @ts-expect-error

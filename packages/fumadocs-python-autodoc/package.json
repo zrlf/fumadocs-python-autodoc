@@ -1,6 +1,6 @@
 {
   "name": "fumadocs-python-autodoc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Python autodoc for FumaDocs",
   "license": "MIT",
   "author": {
@@ -20,11 +20,13 @@
     "./preset.css": "./styles/preset.css",
     "./source": {
       "import": "./dist/source/index.js",
-      "types": "./dist/source/index.d.ts"
+      "types": "./dist/source/index.d.ts",
+      "default": "./dist/source/index.js"
     },
     "./components": {
       "import": "./dist/components/index.js",
-      "types": "./dist/components/index.d.ts"
+      "types": "./dist/components/index.d.ts",
+      "default": "./dist/components/index.js"
     }
   },
   "scripts": {
