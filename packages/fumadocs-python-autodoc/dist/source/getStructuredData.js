@@ -19,7 +19,10 @@ export function getStructuredData(data) {
     for (const attr of data.attributes) {
         contents.push({
             heading: "attributes",
-            content: [attr.name, stringifyDescription(attr.description)].join(": "),
+            content: [
+                `${data.name}.${attr.name}`,
+                stringifyDescription(attr.description),
+            ].join(": "),
         });
     }
     for (const func of Object.values(data.functions)) {
@@ -31,14 +34,17 @@ export function getStructuredData(data) {
             for (const param of func.parameters) {
                 contents.push({
                     heading: func.name,
-                    content: [param.name, stringifyDescription(param.description)].join(": "),
+                    content: [
+                        `${param.name}`,
+                        stringifyDescription(param.description),
+                    ].join(": "),
                 });
             }
         }
         if (func.returns.description) {
             contents.push({
                 heading: func.name,
-                content: func.returns.description,
+                content: `Returns: ${func.returns.description}`,
             });
         }
     }
@@ -51,7 +57,7 @@ export function getStructuredData(data) {
             for (const prop of cls.attributes) {
                 contents.push({
                     heading: cls.name,
-                    content: [prop.name, prop.description].join(": "),
+                    content: [`${cls.name}.${prop.name}`, prop.description].join(": "),
                 });
             }
         }
@@ -66,7 +72,7 @@ export function getStructuredData(data) {
             if (!func)
                 continue;
             const id = `${cls.name}.${func.name}`;
-            headings.push({ id: id, content: func.name });
+            headings.push({ id: id, content: id });
             if (func.description) {
                 contents.push({ heading: id, content: func.description });
             }
@@ -76,14 +82,17 @@ export function getStructuredData(data) {
                         continue;
                     contents.push({
                         heading: id,
-                        content: [param.name, stringifyDescription(param.description)].join(": "),
+                        content: [
+                            `${param.name}`,
+                            stringifyDescription(param.description),
+                        ].join(": "),
                     });
                 }
             }
             if (func.returns?.description) {
                 contents.push({
                     heading: id,
-                    content: func.returns.description,
+                    content: `Returns: ${func.returns.description}`,
                 });
             }
         }

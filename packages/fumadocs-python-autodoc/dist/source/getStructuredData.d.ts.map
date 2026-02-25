@@ -1,1 +1,1 @@
-{"version":3,"file":"getStructuredData.d.ts","sourceRoot":"","sources":["../../src/source/getStructuredData.ts"],"names":[],"mappings":"AAAA,OAAO,EAAoB,eAAe,EAAE,MAAM,yCAAyC,CAAC;AAC5F,OAAO,EAAE,cAAc,EAAE,MAAM,2BAA2B,CAAC;AAiB3D,wBAAgB,iBAAiB,CAAC,IAAI,EAAE,eAAe,GAAG,cAAc,CAqFvE"}
+{"version":3,"file":"getStructuredData.d.ts","sourceRoot":"","sources":["../../src/source/getStructuredData.ts"],"names":[],"mappings":"AAAA,OAAO,EAEL,eAAe,EAChB,MAAM,yCAAyC,CAAC;AACjD,OAAO,EAAE,cAAc,EAAE,MAAM,2BAA2B,CAAC;AAiB3D,wBAAgB,iBAAiB,CAAC,IAAI,EAAE,eAAe,GAAG,cAAc,CA8FvE"}
